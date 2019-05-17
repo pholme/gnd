@@ -1,0 +1,2 @@
+# gnd
+Generalized network dismantling
