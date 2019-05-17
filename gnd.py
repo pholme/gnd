@@ -7,7 +7,7 @@ Xiao-Long Ren, Niels Gleinig, Dirk Helbing, and Nino Antulov-Fantulin, Generaliz
 
 Unlike the paper, this code uses a standard solver for the eigenvectors.
 
-The program can be run as: "python gnd.py network.adj" where network.adj is an edgelist representation of the network.
+The program can be run as: "python gnd.py network.adj [degree/unit specifying the cost function]" where network.adj is an edgelist representation of the network.
 
 Output is as follows (per row): [accumulated deletion cost] [deleted node id] [size of largest connected component]
 
