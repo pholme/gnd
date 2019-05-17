@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
 	print '0 -', str(lcc(G)) # output before any nodes are deleted
 
-	while True:
+	while lcc(G) > 2:
 		# Step 1. === Construct the spectral partition of the largest connected component (LCC). ===
 		LCC = G.subgraph(max(nx.connected_components(G), key=len)) # Get the LCC.
 		ii = {v:i for i,v in enumerate(list(LCC.nodes()))} # Store the node indices in the same order as LCC.
@@ -118,9 +118,6 @@ if __name__ == "__main__":
 		# Step 4. === Delete the nodes in cover. ===
 		for v in cover:
 			remove_and_print_update(G,v)
-
-		if lcc(G) < 3: # Treat the trivial case separately.
-			break
 
 	# Step 5. === Deleting the (trivial) rest of the nodes ===
 	for v in [v for u,v in G.edges()]: # half of the degree = 1 nodes
