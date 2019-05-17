@@ -100,7 +100,7 @@ if __name__ == "__main__":
 			if Fiedler[ii[u]] * Fiedler[ii[v]] <= 0.0: 
 				H.add_edge(u,v)
 
-		# Step 3. === Construct a minimal vertex cover of H w.r.t degree in G / degree in H. ===
+		# Step 3. === Construct a minimal vertex cover of H w.r.t. degree in G / degree in H. ===
 		for v in H.nodes(): # calculate weight
 			H.nodes[v]['weight'] = 1.0 / H.degree(v)
 			if G.graph['cost type'] == 'degree':
