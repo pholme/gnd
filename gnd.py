@@ -20,7 +20,7 @@ import networkx as nx
 from networkx.algorithms.approximation import min_weighted_vertex_cover
 from scipy.sparse.linalg import eigsh
 from scipy.sparse.linalg.eigen.arpack.arpack import ArpackNoConvergence
-from scipy.sparse import diags, identity
+from scipy.sparse import diags
 import numpy as np
 from numpy.random import shuffle
 
